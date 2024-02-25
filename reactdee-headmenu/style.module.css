@@ -1,0 +1,138 @@
+.menu {
+  background-color: var(--colorBackgroundHeadMenu);
+  font-size: var(--fontSizeMenuHeadMenu);
+  width: 100dvw;
+  height: 3em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: Flex;
+  justify-content: var(--menuAlignHeadMenu);
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logoStart {
+  height: 95%;
+  position: absolute;
+  left: 30px
+}
+
+.logoEnd {
+  height: 95%;
+  position: absolute;
+  right: 30px
+}
+
+.menuResponsive {
+  background-color: var(--colorBackgroundHeadMenu);
+  font-size: var(--fontSizeMenuResponsiveHeadMenu);
+  display: none;
+  width: 15em;
+  position: fixed;
+  top: 2em;
+  right: -26em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: right 0.3s;
+}
+
+.responsiveMenuButton {
+  height: 2em;
+  filter: invert(1);
+  position: fixed;
+  top: 0.20em;
+  right: 0.5em;
+  cursor: pointer;
+}
+
+.responsiveMenuButton:hover {
+  filter: invert(0.7)
+}
+
+.responsiveElement {
+  background-color: var(--colorBackgroundHeadMenu);
+  top: 0;
+  right: -1em;
+  position: relative;
+  padding: 0.5em;
+  padding-left: 1em;
+  z-index: 10;
+  /* backgroundColor: colorBackground, */
+}
+
+.element {
+  background-color: var(--colorBackgroundHeadMenu);
+  top: 0;
+  position: relative;
+  padding: 0.5em;
+  padding-left: 2em;
+  padding-right: 5em;
+  z-index: 10;
+}
+
+.element:hover .subMenu {
+  transform: scale(1, 1);
+}
+
+.subMenu {
+  background-color: var(--colorBackgroundHeadMenu);
+  position: absolute;
+  left: 0;
+  padding: 0.5em;
+  transform-origin: top;
+  display: flex;
+  transform: scale(1, 0);
+  flex-direction: column;
+  align-items: start;
+  list-style: none;
+  margin: 0;
+  transition: transform 0.3s;
+}
+
+
+.subElement {
+  text-wrap: nowrap;
+  padding: 1em;
+}
+
+.a {
+  color: var(--colorLinkHeadMenu);
+  font-weight: 700;
+  margin-right: 0.5em;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.a:hover {
+  text-shadow: var(--hoverLinkHeadMenu);
+}
+
+.v {
+  color: var(--colorOpenTagHeadMenu);
+  margin-left: 0.3em;
+  writing-mode: vertical-rl;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+
+  .menuResponsive {
+    display: flex;
+    right: -25em;
+  }
+
+  .element {
+    display: none;
+  }
+
+
+}

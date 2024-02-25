@@ -1,0 +1,20 @@
+{
+  "name": "reactdee-gallery",
+  "version": "0.1.1",
+  "description": "Simply, easy and ready for use gallery component for React",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BrunoDiaz.dev",
+  "license": "ISC",
+  "keywords": [
+    "react",
+    "gallery",
+    "component"
+  ],
+  "files": [
+    "index",
+    "style.module.css"
+  ]
+}

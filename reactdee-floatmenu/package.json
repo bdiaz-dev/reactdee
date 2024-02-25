@@ -1,0 +1,11 @@
+{
+  "name": "reactdee-floatmenu",
+  "version": "0.1.2",
+  "description": "Simply, easy and ready for use floating menu component for React",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BrunoDiaz.dev",
+  "license": "ISC"
+}

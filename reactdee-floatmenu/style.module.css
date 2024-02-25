@@ -1,0 +1,52 @@
+.container {
+  color: var(--colorFontFloatMenu);
+  max-width: fit-content;
+  font-weight: bolder;
+  text-shadow: 2px 2px 2px rgb(255, 255, 255);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.element {
+  background-color: var(--colorBackgroundFloatMenu);
+  display: flex;
+  padding: 0.3em 2em;
+  height: 3em;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px black;
+  transition: all .3s;
+  align-items: center;
+}
+
+.element:hover {
+  transform: scale(1.1, 1.1);
+  background-color: var(--colorHoverFloatMenu);
+}
+
+.image {
+  margin: 10px;
+  height: 2em;
+  float: left;
+  margin-right: .8em;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    font-size: var(--fontSizeFloatMenu);
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    font-size: calc(var(--fontSizeFloatMenu) * 1.5);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    font-size: calc(var(--fontSizeFloatMenu) * 2);
+  }
+}

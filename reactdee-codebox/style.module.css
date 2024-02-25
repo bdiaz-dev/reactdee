@@ -1,0 +1,51 @@
+.codeBox {
+  background-color: var(--colorBackgroundCodeBox);
+  color: var(--colorCodeCodeBox);
+  padding: 10px;
+  border-radius: 5px;
+  overflow: auto;
+  width: 80%;
+  margin: auto;
+  font-size: var(--fontSizeCodeBox);
+}
+
+.pre {
+  margin: 0;
+}
+
+.code {
+  display: block;
+}
+
+.code>pre>code {
+  background: none !important;
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  float: right;
+
+  color: var(--colorButtonTextCodeBox);
+
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 0.4em 1.5em;
+  font-size: var(--buttonSizeCodeBox);
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--colorButtonCodeBox);
+  cursor: pointer;
+  transition: background-color 0.25s;
+
+  &:hover {
+    background-color: var(--colorButtonHoverCodeBox);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
