@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 50px;
+}
+
+.componentsList {
+  min-width: 150px;
+
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article {
+  display: flex;
+  max-width: 700px;
+}
+
+.content {
+  text-wrap: balance;
+}
+
+.articleSections {
+  min-width: 150px;
+  padding-left: 50px;
+
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
