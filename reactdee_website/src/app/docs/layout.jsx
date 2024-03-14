@@ -1,8 +1,35 @@
+'use client'
+
 import { Children } from 'react'
 import styles from './docs.module.css'
 import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function DocsLayout ({ children }) {
+  const pathname = usePathname()
+  const links = [
+    {
+      title: 'Home',
+      href: '/docs'
+    },
+    {
+      title: 'HeadMenu',
+      href: '/docs/headmenu'
+    },
+    {
+      title: 'FloatMenu',
+      href: '/docs'
+    },
+    {
+      title: 'Gallery',
+      href: '/docs'
+    },
+    {
+      title: 'CodeBox',
+      href: '/docs'
+    }
+  ]
   return (
     <div>
 
@@ -20,11 +47,30 @@ export default function DocsLayout ({ children }) {
       <div className={styles.main}>
         <div>
           <ul className={styles.componentsList}>
+            {
+              links.map(link => (
+                <li
+                  key={link.href}
+                >
+                  <Link
+                    href={link.href}
+
+                  >
+                    aas
+                  </Link>
+
+                </li>
+              ))
+            }
             <li>
-              Home
+              <Link href={'/docs'}>
+                Home
+              </Link>
             </li>
             <li>
-              HeadMenu
+              <Link href={'/docs/headmenu'}>
+                HeadMenu
+              </Link>
             </li>
             <li>
               FloatMenu

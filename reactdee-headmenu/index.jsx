@@ -39,7 +39,7 @@ export default function HeadMenu ({
   /**
     Edit this object with elements of your needed menu.
     Parents are principal elements, and inside there is each sub-element.
-    If the section doesn´t have sub-elemnts let null vale.
+    If the section doesn´t have sub-elemnts let null value.
   */
   elements = {
     home: {
@@ -152,8 +152,19 @@ export default function HeadMenu ({
           i.parentElement.style.writingMode = 'vertical-rl' // TODO : PLEGADO AUTOMATICO EN CAMBIO DE RESOLUCION Y CERRADO DE MENU
         }, '350')
       }
-    }) // <-------------------
+    })
   }
+
+  const handleClick = (el) => {
+    if (el.hasOwnProperty('onClick')) {
+      el.onClick()
+    } else if (el.hasOwnProperty('url')) {
+      window.location.href = el.url
+    } else {
+      throw new Error('>> CLICKED ELEMENT DON´T HAVE ANY ACTIONS <<')
+    }
+  }
+
   const menuResponsiveRef = useRef()
   //
   //
@@ -169,11 +180,13 @@ export default function HeadMenu ({
       <ul
         className={moduleStyles.menu}
       >
-        <img // If you use 'NextJs', remember you can use Image tag for better performance.
-          className={(logoAlign === 'start') ? moduleStyles.logoStart : moduleStyles.logoEnd}
-          src={logo}
-          alt='logo'
-        />
+        {
+          logo &&
+          <img // If you use 'NextJs', remember you can use Image tag for better performance.
+            className={(logoAlign === 'start') ? moduleStyles.logoStart : moduleStyles.logoEnd}
+            src={logo}
+            alt='logo'
+          />}
         {Object.entries(elements).map((element) => {
           return (
             <li
@@ -181,8 +194,8 @@ export default function HeadMenu ({
               key={element[0]}
             >
               <a // change this tag for Link if you use routing (remember the closer)
-                href={element[1].url}
                 className={moduleStyles.a}
+                onClick={() => handleClick(element[1])}
               >
                 {element[1].title}
               </a>
@@ -196,7 +209,7 @@ export default function HeadMenu ({
                         key={subElement[1].title} className={moduleStyles.subElement}
                       >
                         <a // change this tag for Link if you use routing (remember the closer)
-                          href={subElement[1].url}
+                          onClick={() => handleClick(element[1])}
                           className={moduleStyles.a}
                         >
                           {subElement[1].title}
@@ -228,7 +241,7 @@ export default function HeadMenu ({
                 className={moduleStyles.responsiveElement}
               >
                 <a // change this tag for Link if you use routing (remember the closer)
-                  href={element[1].url}
+                  onClick={() => handleClick(element[1])}
                   className={moduleStyles.a}
                 >
                   {element[1].title}
@@ -249,7 +262,7 @@ export default function HeadMenu ({
                               key={subElement[1].title} className={moduleStyles.subElement}
                             >
                               <a // change this tag for Link if you use routing (remember the closer)
-                                href={subElement[1].url}
+                                onClick={() => handleClick(element[1])}
                                 className={moduleStyles.a}
                               >
                                 {subElement[1].title}

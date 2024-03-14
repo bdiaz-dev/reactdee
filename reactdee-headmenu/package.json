@@ -1,6 +1,6 @@
 {
   "name": "reactdee-headmenu",
-  "version": "0.1.0",
+  "version": "0.1.7",
   "description": "Simply, easy and ready for use head menu component for React",
   "main": "index.jsx",
   "scripts": {

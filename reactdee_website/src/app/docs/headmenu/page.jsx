@@ -1,4 +1,4 @@
-import styles from './docs.module.css'
+import styles from '../docs.module.css'
 
 export default function docs () {
   return (
@@ -6,12 +6,12 @@ export default function docs () {
       <div className={styles.content}>
 
         <h1>
-          Bienvenidos a ReactDee!
+          HeadMenu
         </h1>
         <br />
 
         <p>
-          Este catalogo se basa en la máxima simplicidad a la hora de implementar componentes. De manera que la creación de una aplicación con React que no necesite de gran personalización, y que busque la simplicidad, sea rápida y sencilla.
+          Componente de menu de cabecera
         </p>
         <br />
 
