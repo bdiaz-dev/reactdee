@@ -5,24 +5,18 @@ import CodeBox from 'reactdee-codebox'
 import Link from 'next/link'
 // import Gallery from 'reactdee-gallery'
 
-export default function HeadMenuPage () {
+export default function CodeBoxPage () {
   return (
     <div className={styles.article}>
       <div className={styles.content}>
 
         <h1 id='start'>
-          HeadMenu
+          CodeBox
         </h1>
-        <Link href={'/previews/headmenu'} target='blank'>PREVIEW</Link>
-        {/* <br />
-
-        <Gallery
-          images={images}
-        /> */}
         <br />
 
         <p>
-          {`With this component, you'll be able to have a complete header menu in your application. Fixed on the screen, collapsible, ready for responsiveness, and highly customizable.`}
+          {`This component is a simple code box where you can easily display code snippets to your users, along with a button that allows easy copying of the code.`}
         </p>
         <br />
 
@@ -44,7 +38,7 @@ export default function HeadMenuPage () {
         <CodeBox width={'95%'}>
           {
             `
-  $ npm i reactdee-headmenu
+  $ npm i reactdee-codebox
               `
           }
         </CodeBox>
@@ -57,7 +51,7 @@ export default function HeadMenuPage () {
         <br />
 
         <p>
-          <a href="https://github.com/reactdee/headmenu">https://github.com/reactdee/headmenu</a>
+          <a href="https://github.com/reactdee/codebox">https://github.com/reactdee/headmenu</a>
         </p>
         <br />
 
@@ -69,7 +63,7 @@ export default function HeadMenuPage () {
         <CodeBox width={'95%'}>
           {
             `
-  import HeadMenu from 'reactdee-headmenu'
+  import CodeBox from 'reactdee-codebox'
             `
           }
         </CodeBox>
@@ -86,7 +80,7 @@ export default function HeadMenuPage () {
   export default function App () {
     return (
       <>
-        <HeadMenu />
+      <CodeBox></CodeBox>
       </>
     )
   }
@@ -96,75 +90,37 @@ export default function HeadMenuPage () {
         <br />
 
         <p>
-          Afterwards, to introduce the elements into the menu, we will create an object with the following instructions.
-        </p>
-        <br />
-        <p>
-          {`Pay attention that we can give each element two possible types of executions depending on our needs. If we want to use a simple anchor with a href we will use "url", however, for a callback we will use "onClick".`}
-        </p>
-        <br />
-        <p>
-          If neither of them is used, that element will have no action and an alert will appear in the console.
-        </p>
-        <br />
-        <p>
-          On the other hand, if we want the element to have child subelements, we must create them within subElements.
-        </p>
-        <br />
-        <p>
-          Here is an example:
+          {`In order to use this component, we need to include the code we want to display inside it as "children" with the following structure:`}
         </p>
         <br />
 
         <CodeBox width={'95%'}>
           {
             `
-  const elements = {
-    home: {
-      title: 'Home',
-      url: https://mywebsite.com/home,
-    },
-    company: {
-      title: 'Company',
-      onClick: () => { handleCompany() },
-      subElements: {
-        history: {
-          title: 'Our history',
-          onClick: () => { handleHistory() }
-        },
-        gallery: {
-          title: 'Images gallery',
-          url: "https://mywebsite.com/gallery
-        }
-      }
+      <CodeBox>
+        {
+          \`
+  const yourCode = () => {
+    const text = "you can write your code with the idents that you need and the component will conserve it"
+    if (true) {
+      you can do this
     }
   }
+    
+  export default yourCode
+          \`
+        }
+      </CodeBox>
             `
           }
         </CodeBox>
         <br />
-        <p>
-          {`And then you can include this object as "elements" prop of the component.`}
+
+        <p style={{ color: 'lightblue' }}>
+          * We can also do it with a variable that maintains the described structure. In this case, we recommend using imported variables. This allows writing the code to be displayed in separate files and avoiding long and complicated source code.
         </p>
         <br />
 
-        <CodeBox width={'95%'}>
-          {
-            `
-  export default function App () {
-    return (
-      <>
-        <HeadMenu 
-          elements={elements}
-        />
-      </>
-    )
-  }
-            `
-          }
-        </CodeBox>
-        <br />
-        <br />
 
         <h3 id='configuration'>
           Configurations:
@@ -172,11 +128,23 @@ export default function HeadMenuPage () {
         <br />
 
         <p>
-          {`Next we can make some configurations to personalize our menu and make it more in line with the aesthetics of our application. `}
+          {`This component comes with a default conservative aesthetic of black background and white font. However, we can use some configurations to give it a more personal touch or match the style of our application.`}
         </p>
         <br />
         <p>
-          {`If you don't use one, it will stay with its default value`}
+          {`As with the rest of ReactDee components, we will use props for configuration.`}
+        </p>
+        <br />
+        <p>
+          {`For color configurations, we can use literal color names ('white'), hexadecimal codes ('#E15537'), or rgba ('rgba(13, 57, 95, 0.295)').`}
+        </p>
+        <br />
+        <p>
+          {`And for size configurations, we have total freedom of scaling using numbers from '0.1' to whatever we consider appropriate, but we do not recommend using more than '2' for any of them.`}
+        </p>
+        <br />
+        <p className={styles.anotations}>
+          {`Remember that you can add as many configurations as you want, and those that are not added will use their default settings.`}
         </p>
         <br />
 
@@ -184,20 +152,11 @@ export default function HeadMenuPage () {
           - Colors
         </h4>
         <br />
-        <p>
-          You can use literal names, rgba or hex.
-        </p>
-        <br />
 
         <ul className={styles.configurations}>
           <li>
             <b>
-              colorLink
-            </b>
-          </li>
-          <li>
-            <b>
-              colorHover
+              colorCode
             </b>
           </li>
           <li>
@@ -207,7 +166,22 @@ export default function HeadMenuPage () {
           </li>
           <li>
             <b>
-              colorOpenTag
+              colorButton
+            </b>
+          </li>
+          <li>
+            <b>
+              colorButtonHover
+            </b>
+          </li>
+          <li>
+            <b>
+              colorButtonText
+            </b>
+          </li>
+          <li>
+            <b>
+              colorButtonIco
             </b>
           </li>
         </ul>
@@ -235,42 +209,20 @@ export default function HeadMenuPage () {
         <br />
 
         <h4>
-          - Others
+          - Sizes
         </h4>
         <br />
 
         <ul className={styles.configurations}>
           <li>
             <b>
-              size
+              buttonSize
             </b>
-            <p>
-              {`The entire headmenu size. Valid options: 's' - 'm' - 'l' - 'xl' - 'xxl'.`}
-            </p>
           </li>
           <li>
             <b>
-              menuAlign
+              fontSize
             </b>
-            <p>
-              {`Positioning for menu. Valid options: 'start' - 'center' - 'end' - 'space-around'.`}
-            </p>
-          </li>
-          <li>
-            <b>
-              logo
-            </b>
-            <p>
-              {`Place for your logo image. If you don´t need this use 'false'. By default there is the React Logo.`}
-            </p>
-          </li>
-          <li>
-            <b>
-              logoAlign
-            </b>
-            <p>
-              {`Positioning for logo. Valid options: 'start' - 'end'.`}
-            </p>
           </li>
         </ul>
         <br />

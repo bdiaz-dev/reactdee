@@ -14,7 +14,6 @@ export default function GalleryPage () {
         </h1>
 
         <br />
-
         <p>
           {`          With this component, you'll be able to embed a gallery into your application to showcase the images you desire. No additional configurations are needed, and it offers a user-friendly and intuitive interface, making it easy to add more vibrancy to your project.`
           }
@@ -51,7 +50,7 @@ export default function GalleryPage () {
         </p>
         <br />
 
-        <CodeBox>
+        <CodeBox width={'95%'}>
           {
             `
   npm i reactdee-headmenu
@@ -77,7 +76,7 @@ export default function GalleryPage () {
         </p>
         <br />
 
-        <CodeBox>
+        <CodeBox width={'95%'}>
           {
             `
   import Gallery from 'reactdee-gallery'
@@ -91,7 +90,7 @@ export default function GalleryPage () {
         </p>
         <br />
 
-        <CodeBox>
+        <CodeBox width={'95%'}>
           {
             `
     export default function App () {
@@ -111,7 +110,7 @@ export default function GalleryPage () {
         </p>
         <br />
 
-        <CodeBox>
+        <CodeBox width={'95%'}>
           {
             `
     const images = [
@@ -141,7 +140,7 @@ export default function GalleryPage () {
         </p>
         <br />
 
-        <CodeBox>
+        <CodeBox width={'95%'}>
           {
             `
     export default function App () {
@@ -169,7 +168,7 @@ export default function GalleryPage () {
         <h3 id='example'>{`Here's an example of complete code:`}</h3>
         <br />
 
-        <CodeBox>
+        <CodeBox width={'95%'}>
           {
             `
     import Gallery from 'reactdee-gallery'
