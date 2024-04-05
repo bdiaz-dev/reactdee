@@ -51,7 +51,7 @@ export default function CodeBoxPage () {
         <br />
 
         <p>
-          <a href="https://github.com/reactdee/codebox">https://github.com/reactdee/headmenu</a>
+          <a href="https://github.com/reactdee/codebox">https://github.com/reactdee/codebox</a>
         </p>
         <br />
 
@@ -116,7 +116,7 @@ export default function CodeBoxPage () {
         </CodeBox>
         <br />
 
-        <p style={{ color: 'lightblue' }}>
+        <p className={styles.anotations}>
           * We can also do it with a variable that maintains the described structure. In this case, we recommend using imported variables. This allows writing the code to be displayed in separate files and avoiding long and complicated source code.
         </p>
         <br />
@@ -193,12 +193,20 @@ export default function CodeBoxPage () {
   export default function App () {
     return (
       <>
-        <HeadMenu 
-          colorLink = 'rgba(0, 0, 255, 1)'
-          colorHover = 'red'
-          colorBackground = '#d3d3d3'
-          colorOpenTag = 'rgb(10,10,10)'
-        />
+        <CodeBox 
+          colorCode = 'rgba(0, 0, 255, 1)'
+          colorBackground = rgb(0,0,0)
+          colorButton = 'red'
+          colorButtonHover = '#d3d3d3'
+          colorButtonText = 'rgb(10,10,10)'
+          colorButtonIco = 
+        >
+         {
+          \`
+  const yourCode
+          \`
+         }
+        </CodeBox>
       </>
     )
   }
