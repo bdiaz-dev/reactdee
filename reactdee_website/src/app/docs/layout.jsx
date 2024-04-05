@@ -11,7 +11,7 @@ export default function DocsLayout ({ children }) {
   const links = [
     {
       title: 'Home',
-      href: '/docs'
+      href: '/docs/home'
     },
     {
       title: 'HeadMenu',
@@ -19,15 +19,15 @@ export default function DocsLayout ({ children }) {
     },
     {
       title: 'FloatMenu',
-      href: '/docs'
+      href: '/docs/floatmenu'
     },
     {
       title: 'Gallery',
-      href: '/docs'
+      href: '/docs/gallery'
     },
     {
       title: 'CodeBox',
-      href: '/docs'
+      href: '/docs/codebox'
     }
   ]
   return (
@@ -47,6 +47,9 @@ export default function DocsLayout ({ children }) {
       <div className={styles.main}>
         <div>
           <ul className={styles.componentsList}>
+            <b className={styles.sideTitles}>
+              Places
+            </b>
             {
               links.map(link => (
                 <li
@@ -56,31 +59,12 @@ export default function DocsLayout ({ children }) {
                     href={link.href}
 
                   >
-                    aas
+                    {link.title}
                   </Link>
 
                 </li>
               ))
             }
-            <li>
-              <Link href={'/docs'}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href={'/docs/headmenu'}>
-                HeadMenu
-              </Link>
-            </li>
-            <li>
-              FloatMenu
-            </li>
-            <li>
-              Gallery
-            </li>
-            <li>
-              CodeBox
-            </li>
           </ul>
         </div>
 

@@ -5,14 +5,13 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-  /* max-width: 800px; */
   margin: auto;
 }
 
-.code {
+/* .code {
   font-weight: 700;
   font-family: var(--font-mono);
-}
+} */
 
 .grid {
   display: grid;

@@ -15,6 +15,7 @@
   margin-top: 50px;
 
   gap: 50px;
+
 }
 
 .componentsList {
@@ -35,8 +36,27 @@
 
 .content {
   text-wrap: balance;
-  min-width: 550px;
+  min-width: 600px;
+
+  max-height: 80dvh;
+
+  overflow-y: scroll;
+
+  padding-inline: 20px;
 }
+
+.configurations {
+  margin-left: 30px;
+}
+
+.configurations li {
+  margin-bottom: 10px;
+}
+
+.articleSign {
+  text-align: end;
+}
+
 
 .articleSections {
   min-width: 150px;
@@ -48,4 +68,15 @@
   flex-direction: column;
   gap: 30px;
 
+  /* position: sticky;
+  top: 120px; */
+
+}
+
+.sideTitles {
+  text-decoration: underline;
+}
+
+.codesContainer div {
+  width: 90%;
 }

@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "reactdee-codebox": "^0.1.0",
+    "reactdee-gallery": "^0.2.0",
+    "reactdee-headmenu": "^0.1.7"
   },
   "devDependencies": {
     "eslint": "^8",
