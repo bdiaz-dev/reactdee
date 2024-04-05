@@ -5,13 +5,13 @@ import CodeBox from 'reactdee-codebox'
 import Link from 'next/link'
 // import Gallery from 'reactdee-gallery'
 
-export default function CodeBoxPage () {
+export default function FloatMenuPage () {
   return (
     <div className={styles.article}>
       <div className={styles.content}>
 
         <h1 id='start'>
-          CodeBox
+          FloatMenu
         </h1>
         <br />
 
