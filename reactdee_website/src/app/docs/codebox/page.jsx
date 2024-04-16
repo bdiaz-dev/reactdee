@@ -269,6 +269,7 @@ export default function CodeBoxPage () {
 
         <CodeBox
           width={'95%'}
+          colorButtonHover='rgb(14, 187, 200)'
         >
           {
             `

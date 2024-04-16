@@ -168,7 +168,10 @@ export default function GalleryPage () {
         <h3 id='example'>{`Here's an example of complete code:`}</h3>
         <br />
 
-        <CodeBox width={'95%'}>
+        <CodeBox
+          width={'95%'}
+          colorButtonHover='rgb(14, 187, 200)'
+        >
           {
             `
     import Gallery from 'reactdee-gallery'

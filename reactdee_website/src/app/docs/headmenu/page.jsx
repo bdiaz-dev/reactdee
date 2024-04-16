@@ -3,6 +3,7 @@
 import styles from '../docs.module.css'
 import CodeBox from 'reactdee-codebox'
 import Link from 'next/link'
+import FloatMenu from 'reactdee-floatmenu'
 // import Gallery from 'reactdee-gallery'
 
 export default function HeadMenuPage () {
@@ -13,17 +14,30 @@ export default function HeadMenuPage () {
         <h1 id='start'>
           HeadMenu
         </h1>
-        <Link href={'/previews/headmenu'} target='blank'>PREVIEW</Link>
-        {/* <br />
-
-        <Gallery
-          images={images}
-        /> */}
         <br />
 
         <p>
           {`With this component, you'll be able to have a complete header menu in your application. Fixed on the screen, collapsible, ready for responsiveness, and highly customizable.`}
         </p>
+        <br />
+
+        <FloatMenu
+          fontSize='xs'
+          colorHover='rgb(14, 187, 200)'
+          // colorBackground='white'
+          elements={
+            [
+              {
+                text: 'Click here to preview',
+                img: 'https://www.svgrepo.com/show/4494/preview.svg',
+                url: '/previews/headmenu'
+              }
+            ]
+          }
+        />
+
+        {/* <Link href={'/previews/headmenu'} target='blank'><span className={styles.anotations}>PREVIEW</span></Link> */}
+        {/* <br /> */}
         <br />
 
         <h3 id='implementation'>
@@ -305,6 +319,7 @@ export default function HeadMenuPage () {
 
         <CodeBox
           width={'95%'}
+          colorButtonHover='rgb(14, 187, 200)'
         >
           {
             `

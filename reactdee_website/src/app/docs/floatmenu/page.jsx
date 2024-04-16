@@ -2,8 +2,7 @@
 
 import styles from '../docs.module.css'
 import CodeBox from 'reactdee-codebox'
-import Link from 'next/link'
-// import Gallery from 'reactdee-gallery'
+import FloatMenu from 'reactdee-floatmenu'
 
 export default function FloatMenuPage () {
   return (
@@ -16,8 +15,19 @@ export default function FloatMenuPage () {
         <br />
 
         <p>
-          {`This component is a simple code box where you can easily display code snippets to your users, along with a button that allows easy copying of the code.`}
+          {`With this component you can have a very simple menu to access other web pages. With the corresponding logo on each link and growth effect on hover.`}
         </p>
+        <br />
+
+        <h3>Preview</h3>
+        <br />
+
+        <FloatMenu
+          // colorFont='white'
+          colorBackground='lightblue'
+          colorHover='rgb(14, 187, 200)'
+          fontSize='xs'
+        />
         <br />
 
         <h3 id='implementation'>
@@ -38,7 +48,7 @@ export default function FloatMenuPage () {
         <CodeBox width={'95%'}>
           {
             `
-  $ npm i reactdee-codebox
+  $ npm i reactdee-floatmenu
               `
           }
         </CodeBox>
@@ -51,7 +61,7 @@ export default function FloatMenuPage () {
         <br />
 
         <p>
-          <a href="https://github.com/reactdee/codebox">https://github.com/reactdee/codebox</a>
+          <a href="https://github.com/reactdee/floatmenu">https://github.com/reactdee/floatmenu</a>
         </p>
         <br />
 
@@ -63,7 +73,7 @@ export default function FloatMenuPage () {
         <CodeBox width={'95%'}>
           {
             `
-  import CodeBox from 'reactdee-codebox'
+  import FloatMenu from 'reactdee-floatmenu'
             `
           }
         </CodeBox>
@@ -80,7 +90,7 @@ export default function FloatMenuPage () {
   export default function App () {
     return (
       <>
-      <CodeBox></CodeBox>
+        <FloatMenu />
       </>
     )
   }
@@ -90,34 +100,51 @@ export default function FloatMenuPage () {
         <br />
 
         <p>
-          {`In order to use this component, we need to include the code we want to display inside it as "children" with the following structure:`}
+          {`To use this component we will have to create an array with the elements we want to display. With the following structure:`}
         </p>
         <br />
 
         <CodeBox width={'95%'}>
           {
             `
-      <CodeBox>
-        {
-          \`
-  const yourCode = () => {
-    const text = "you can write your code with the idents that you need and the component will conserve it"
-    if (true) {
-      you can do this
+  const elements = [
+    {
+      text: 'Godot',
+      img: 'https://www.svgrepo.com/show/341856/godot-engine.svg',
+      url: 'https://godotengine.org/'
+    },
+    {
+      text: 'Unity',
+      img: 'https://www.svgrepo.com/show/473818/unity.svg',
+      url: 'https://unity.com/'
+    },
+    {
+      text: 'Unreal Engine',
+      img: 'https://www.svgrepo.com/show/443515/brand-unreal-engine.svg',
+      url: 'https://www.unrealengine.com/'
+    },
+    {
+      text: 'Game Maker',
+      img: 'https://www.svgrepo.com/show/373756/light-gamemaker2.svg',
+      url: 'https://gamemaker.io/'
     }
+  ]
+  
+  export default function App () {
+    return (
+      <>
+        <FloatMenu 
+          elements = {elements}
+        />
+      </>
+    )
   }
-    
-  export default yourCode
-          \`
-        }
-      </CodeBox>
             `
           }
         </CodeBox>
         <br />
-
         <p className={styles.anotations}>
-          * We can also do it with a variable that maintains the described structure. In this case, we recommend using imported variables. This allows writing the code to be displayed in separate files and avoiding long and complicated source code.
+          * You can use as many elements as you need. Just add or remove more objects to the array.
         </p>
         <br />
 
@@ -128,7 +155,7 @@ export default function FloatMenuPage () {
         <br />
 
         <p>
-          {`This component comes with a default conservative aesthetic of black background and white font. However, we can use some configurations to give it a more personal touch or match the style of our application.`}
+          {`This component comes with a default style. But we can modify them according to our needs.`}
         </p>
         <br />
         <p>
@@ -140,7 +167,7 @@ export default function FloatMenuPage () {
         </p>
         <br />
         <p>
-          {`And for size configurations, we have total freedom of scaling using numbers from '0.1' to whatever we consider appropriate, but we do not recommend using more than '2' for any of them.`}
+          {`And for the size configuration, we have five options: "xs", "s", "m", "l" or "xl".`}
         </p>
         <br />
         <p className={styles.anotations}>
@@ -148,15 +175,10 @@ export default function FloatMenuPage () {
         </p>
         <br />
 
-        <h4>
-          - Colors
-        </h4>
-        <br />
-
         <ul className={styles.configurations}>
           <li>
             <b>
-              colorCode
+              colorFont
             </b>
           </li>
           <li>
@@ -166,65 +188,7 @@ export default function FloatMenuPage () {
           </li>
           <li>
             <b>
-              colorButton
-            </b>
-          </li>
-          <li>
-            <b>
-              colorButtonHover
-            </b>
-          </li>
-          <li>
-            <b>
-              colorButtonText
-            </b>
-          </li>
-          <li>
-            <b>
-              colorButtonIco
-            </b>
-          </li>
-        </ul>
-        <br />
-
-        <CodeBox width={'95%'}>
-          {
-            `
-  export default function App () {
-    return (
-      <>
-        <CodeBox 
-          colorCode = 'rgba(0, 0, 255, 1)'
-          colorBackground = rgb(0,0,0)
-          colorButton = 'red'
-          colorButtonHover = '#d3d3d3'
-          colorButtonText = 'rgb(10,10,10)'
-          colorButtonIco = 
-        >
-         {
-          \`
-  const yourCode
-          \`
-         }
-        </CodeBox>
-      </>
-    )
-  }
-            `
-          }
-        </CodeBox>
-
-        <br />
-
-        <h4>
-          - Sizes
-        </h4>
-        <br />
-
-        <ul className={styles.configurations}>
-          <li>
-            <b>
-              buttonSize
+              colorHover
             </b>
           </li>
           <li>
@@ -232,6 +196,7 @@ export default function FloatMenuPage () {
               fontSize
             </b>
           </li>
+
         </ul>
         <br />
 
@@ -241,16 +206,13 @@ export default function FloatMenuPage () {
   export default function App () {
     return (
       <>
-        <CodeBox 
-          buttonSize = '1'
-          fontSize = '1'
-        >
-        {
-          \`
-  const yourCode
-          \`
-        }
-        </CodeBox>
+        <FloatMenu 
+          elements = {elements}
+          colorFont = 'black'
+          colorBackground = 'lightblue'
+          colorHover = 'rgba(0, 0, 120, 0.5)'
+          fontSize = 's'
+        />
       </>
     )
   }
@@ -269,46 +231,45 @@ export default function FloatMenuPage () {
 
         <CodeBox
           width={'95%'}
+          colorButtonHover='rgb(14, 187, 200)'
         >
           {
             `
   
-  import CodeBox from 'reactdee-codebox'
+  import FloatMenu from 'reactdee-floatmenu'
   
-  const elements = {
-    home: {
-      title: 'Home',
-      url: https://mywebsite.com/home,
+  const elements = [
+    {
+      text: 'Godot',
+      img: 'https://www.svgrepo.com/show/341856/godot-engine.svg',
+      url: 'https://godotengine.org/'
     },
-    company: {
-      title: 'Company',
-      onClick: () => { handleCompany() },
-      subElements: {
-        history: {
-          title: 'Our history',
-          onClick: () => { handleHistory() }
-        },
-        gallery: {
-          title: 'Images gallery',
-          url: "https://mywebsite.com/gallery
-        }
-      }
+    {
+      text: 'Unity',
+      img: 'https://www.svgrepo.com/show/473818/unity.svg',
+      url: 'https://unity.com/'
+    },
+    {
+      text: 'Unreal Engine',
+      img: 'https://www.svgrepo.com/show/443515/brand-unreal-engine.svg',
+      url: 'https://www.unrealengine.com/'
+    },
+    {
+      text: 'Game Maker',
+      img: 'https://www.svgrepo.com/show/373756/light-gamemaker2.svg',
+      url: 'https://gamemaker.io/'
     }
-  }
+  ]
             
   export default function App () {
     return (
       <>
-        <HeadMenu
+        <FloatMenu 
           elements = {elements}
-          colorLink = 'rgba(0, 0, 255, 1)'
-          colorHover = 'red'
-          colorBackground = '#d3d3d3'
-          colorOpenTag = 'rgb(10,10,10)'
-          size = 's'
-          menuAlign = 'end'
-          logo = 'https://www.svgrepo.com/show/439290/react.svg'
-          logoAlign = 'start'
+          colorFont = 'black'
+          colorBackground = 'lightblue'
+          colorHover = 'rgba(0, 0, 120, 0.5)'
+          fontSize = 's'
         />
       </>
     )

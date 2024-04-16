@@ -27,11 +27,20 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+}
+
+.componentsList li:hover {
+  color: rgb(14, 187, 200);
+  font-weight: 800;
+  transition: all 0.15s;
 }
 
 .article {
   display: flex;
   width: 700px;
+  scroll-behavior: smooth;
+
 }
 
 .content {
@@ -67,10 +76,12 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
 
-  /* position: sticky;
-  top: 120px; */
-
+.articleSections li:hover {
+  color: rgb(14, 187, 200);
+  font-weight: 800;
+  transition: all 0.15s;
 }
 
 .sideTitles {
