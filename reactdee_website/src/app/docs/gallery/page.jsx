@@ -15,14 +15,14 @@ export default function GalleryPage () {
 
         <br />
         <p>
-          {`          With this component, you'll be able to embed a gallery into your application to showcase the images you desire. No additional configurations are needed, and it offers a user-friendly and intuitive interface, making it easy to add more vibrancy to your project.`
+          {`With this component, you'll be able to embed a gallery into your application to showcase the images you desire. No additional configurations are needed, and it offers a user-friendly and intuitive interface, making it easy to add more vibrancy to your project.`
           }
         </p>
 
         <br />
 
         <p>
-          {`          You can view the images in thumbnail version in a horizontal list, preview them at the top, or, upon clicking the latter, view them in full-screen mode.`}
+          {`You can view the images in thumbnail version in a horizontal list, preview them at the top, or, upon clicking the latter, view them in full-screen mode.`}
         </p>
 
         <br />

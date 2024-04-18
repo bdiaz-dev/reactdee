@@ -1,13 +1,18 @@
 'use client'
 
-import { Children } from 'react'
 import styles from './docs.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { useState, useEffect, useRef } from 'react'
 
 export default function DocsLayout ({ children }) {
-  const pathname = usePathname()
+  const [responsiveOpened, setResponsiveOpened] = useState(false)
+  const [responsiveMenuText, setResponsiveMenuText] = useState('Places')
+  const responsiveComponentsList = useRef()
+  useEffect(() => {
+    responsiveComponentsList.current.style.display = responsiveOpened ? 'flex' : 'none'
+    setResponsiveMenuText(!responsiveOpened ? 'Places' : 'Close Places')
+  }, [responsiveOpened])
   const links = [
     {
       title: 'Home',
@@ -44,12 +49,44 @@ export default function DocsLayout ({ children }) {
       </header>
       <hr />
 
+      <nav className={styles.responsiveMenuContainer}>
+        <div className={styles.responsiveMenu}>
+          <b
+            className={styles.responsiveMenuTitle}
+            onClick={() => { setResponsiveOpened(!responsiveOpened) }}
+          >
+            {responsiveMenuText}
+          </b>
+          <ul
+            className={styles.componentsList}
+            ref={responsiveComponentsList}
+          >
+            {
+              links.map(link => (
+                <li
+                  key={link.href}
+                >
+                  <Link
+                    href={link.href}
+
+                  >
+                    {link.title}
+                  </Link>
+
+                </li>
+              ))
+            }
+          </ul>
+          <hr />
+        </div>
+      </nav>
+
       <div className={styles.main}>
-        <div>
+        <div className={styles.generalMenu}>
+          <b className={styles.sideTitles}>
+            Places
+          </b>
           <ul className={styles.componentsList}>
-            <b className={styles.sideTitles}>
-              Places
-            </b>
             {
               links.map(link => (
                 <li

@@ -38,7 +38,7 @@ export default function DocsHomePage () {
         </p>
 
       </div>
-      <ul className={styles.articleSections}>
+      {/* <ul className={styles.articleSections}>
         <b className={styles.sideTitles}>On this page</b>
         <li>
           <a href="#start">Start</a>
@@ -49,7 +49,7 @@ export default function DocsHomePage () {
         <li>
           <a href="#example">Example of complete code</a>
         </li>
-      </ul>
+      </ul> */}
     </div>
   )
 }

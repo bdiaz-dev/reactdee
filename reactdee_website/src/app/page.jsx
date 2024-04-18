@@ -14,7 +14,7 @@ export default function Home () {
             height={110}
             priority
           />
-          <p>ReactDee <span>By BrunoDiaz.dev</span></p>
+          <p>ReactDee <span>By BrunoDiaz.es</span></p>
         </div>
 
         <div className={styles.welcomeText}>
@@ -34,9 +34,9 @@ export default function Home () {
           rel="noopener noreferrer"
         >
           <h2>
-            Docs <span>-&gt;</span>
+            Docs
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
+          <p>How can we use ReactDee?</p>
         </a>
 
         <a
@@ -46,21 +46,9 @@ export default function Home () {
           rel="noopener noreferrer"
         >
           <h2>
-            Learn <span>-&gt;</span>
+            Show Room
           </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
+          <p>Here you can see our components working. *Temporaly not working*</p>
         </a>
 
         <a
@@ -70,11 +58,23 @@ export default function Home () {
           rel="noopener noreferrer"
         >
           <h2>
-            Deploy <span>-&gt;</span>
+            Repo
           </h2>
           <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            Go to this OpenSource project repository.
           </p>
+        </a>
+
+        <a
+          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          className={styles.card}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2>
+            Meet me
+          </h2>
+          <p>Visit Bruno Diaz website.</p>
         </a>
       </div>
     </main>
