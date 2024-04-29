@@ -56,6 +56,7 @@ export default function Gallery ({
     <div className={moduleStyles.gallery}>
       <div className={moduleStyles.previewContainer}>
         <img
+          id='preview'
           className={moduleStyles.preview}
           src={images[seeImg].src}
           alt={images[seeImg].alt}
@@ -63,31 +64,29 @@ export default function Gallery ({
           onClick={() => { setIsModal(true) }}
         />
       </div>
-      <div>
-        <ul className={moduleStyles.thubnailsContainer}>
-          {
-            images.map((img, index) => {
-              return (
-                <li key={img.alt}>
-                  <img
-                    src={img.src}
-                    className={moduleStyles.thubnail}
-                    alt={img.alt}
-                    title={img.title}
-                    onClick={() => { SetSeeImg(index) }}
-                  />
-                </li>
-              )
-            })
-          }
-        </ul>
+      <div className={moduleStyles.thubnailsContainer}>
+        {
+          images.map((img, index) => {
+            return (
+              <img
+                key={img.alt}
+                src={img.src}
+                className={moduleStyles.thubnail}
+                alt={img.alt}
+                title={img.title}
+                onClick={() => { SetSeeImg(index) }}
+              />
+              // </li>
+            )
+          })
+        }
       </div>
+      {/* </div> */}
       {isModal &&
         <div className={moduleStyles.modalView}>
           <img
             className={moduleStyles.modalCloseButton}
             src='https://www.svgrepo.com/show/486594/close-small.svg'
-            // onClick={() => { setIsModal(false) }}
             onClick={(e) => { closeModal(e) }}
           />
           <div className={moduleStyles.modalImgContainer}>

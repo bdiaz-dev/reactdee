@@ -113,8 +113,8 @@ export default function HeadMenuPage () {
           Afterwards, to introduce the elements into the menu, we will create an object with the following instructions.
         </p>
         <br />
-        <p>
-          {`Pay attention that we can give each element two possible types of executions depending on our needs. If we want to use a simple anchor with a href we will use "url", however, for a callback we will use "onClick".`}
+        <p className={styles.anotations}>
+          {`👉 Pay attention that we can give each element two possible types of executions depending on our needs. If we want to use a simple anchor with a href we will use "url", however, for a callback we will use "onClick".`}
         </p>
         <br />
         <p>
@@ -189,8 +189,8 @@ export default function HeadMenuPage () {
           {`Next we can make some configurations to personalize our menu and make it more in line with the aesthetics of our application. `}
         </p>
         <br />
-        <p>
-          {`If you don't use one, it will stay with its default value`}
+        <p className={styles.anotations}>
+          {`💭 If you don't use one, it will stay with its default value`}
         </p>
         <br />
 
@@ -275,7 +275,7 @@ export default function HeadMenuPage () {
               logo
             </b>
             <p>
-              {`Place for your logo image. If you don´t need this use 'false'. By default there is the React Logo.`}
+              {`Place for your logo image. If you don´t need, use 'false'. By default there is the React Logo.`}
             </p>
           </li>
           <li>

@@ -1,3 +1,5 @@
+'use client'
+
 import HeadMenu from 'reactdee-headmenu'
 
 export default function HeadMenuPreviewPage () {
@@ -7,8 +9,10 @@ export default function HeadMenuPreviewPage () {
     >
       <title>HeadMenu Preview</title>
       <HeadMenu
-        align={'right'}
-        logoAlign={'right'}
+        menuAlign={'end'}
+        logoAlign={'start'}
+        size={'m'}
+        colorOpenTag={'rgb(12, 136, 160)'}
       />
     </div>
   )

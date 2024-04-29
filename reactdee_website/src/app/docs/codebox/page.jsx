@@ -2,8 +2,7 @@
 
 import styles from '../docs.module.css'
 import CodeBox from 'reactdee-codebox'
-import Link from 'next/link'
-// import Gallery from 'reactdee-gallery'
+// import Link from 'next/link'
 
 export default function CodeBoxPage () {
   return (
@@ -17,6 +16,11 @@ export default function CodeBoxPage () {
 
         <p>
           {`This component is a simple code box where you can easily display code snippets to your users, along with a button that allows easy copying of the code.`}
+
+        </p>
+        <br />
+        <p className={styles.anotations}>
+          {'👉 Is the codebox used in all code snippets in this website.'}
         </p>
         <br />
 
@@ -34,7 +38,6 @@ export default function CodeBoxPage () {
           1- Install from npm:
         </p>
         <br />
-        {/* <div className={styles.codesContainer}> */}
         <CodeBox width={'95%'}>
           {
             `
@@ -51,7 +54,7 @@ export default function CodeBoxPage () {
         <br />
 
         <p>
-          <a href="https://github.com/reactdee/codebox">https://github.com/reactdee/codebox</a>
+          <a className={styles.literalLinks} href="https://github.com/reactdee/codebox">https://github.com/reactdee/codebox</a>
         </p>
         <br />
 
@@ -117,7 +120,7 @@ export default function CodeBoxPage () {
         <br />
 
         <p className={styles.anotations}>
-          * We can also do it with a variable that maintains the described structure. In this case, we recommend using imported variables. This allows writing the code to be displayed in separate files and avoiding long and complicated source code.
+          💡 We can also do it with a variable that maintains the described structure. In this case, we recommend using imported variables. This allows writing the code to be displayed in separate files and avoiding long and complicated source code.
         </p>
         <br />
 
@@ -144,7 +147,7 @@ export default function CodeBoxPage () {
         </p>
         <br />
         <p className={styles.anotations}>
-          {`Remember that you can add as many configurations as you want, and those that are not added will use their default settings.`}
+          {`💭 Remember that you can add as many configurations as you want, and those that are not added will use their default settings.`}
         </p>
         <br />
 

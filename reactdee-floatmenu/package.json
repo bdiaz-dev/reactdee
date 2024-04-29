@@ -1,6 +1,6 @@
 {
   "name": "reactdee-floatmenu",
-  "version": "0.1.2",
+  "version": "0.1.6",
   "description": "Simply, easy and ready for use floating menu component for React",
   "main": "index.jsx",
   "scripts": {

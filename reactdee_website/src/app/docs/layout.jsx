@@ -3,15 +3,18 @@
 import styles from './docs.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState, useEffect, useRef } from 'react'
 
 export default function DocsLayout ({ children }) {
+  const pathname = usePathname()
   const [responsiveOpened, setResponsiveOpened] = useState(false)
   const [responsiveMenuText, setResponsiveMenuText] = useState('Places')
   const responsiveComponentsList = useRef()
+
   useEffect(() => {
     responsiveComponentsList.current.style.display = responsiveOpened ? 'flex' : 'none'
-    setResponsiveMenuText(!responsiveOpened ? 'Places' : 'Close Places')
+    setResponsiveMenuText(!responsiveOpened ? '- Places -' : '- Close -')
   }, [responsiveOpened])
   const links = [
     {
@@ -65,10 +68,11 @@ export default function DocsLayout ({ children }) {
               links.map(link => (
                 <li
                   key={link.href}
+                  style={{ color: (pathname == link.href) ? 'var(--enfasis-color)' : '', fontWeight: (pathname == link.href) ? '800' : '' }}
                 >
                   <Link
                     href={link.href}
-
+                    onClick={() => { setResponsiveOpened(false); console.log(responsiveOpened) }}
                   >
                     {link.title}
                   </Link>
@@ -91,10 +95,10 @@ export default function DocsLayout ({ children }) {
               links.map(link => (
                 <li
                   key={link.href}
+                  style={{ color: (pathname == link.href) ? 'var(--enfasis-color)' : '', fontWeight: (pathname == link.href) ? '800' : '' }}
                 >
                   <Link
                     href={link.href}
-
                   >
                     {link.title}
                   </Link>

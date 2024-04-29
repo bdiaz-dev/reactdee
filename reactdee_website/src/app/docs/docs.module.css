@@ -35,6 +35,11 @@
   display: none;
 }
 
+.responsiveMenuContainer li {
+  width: fit-content;
+  margin: auto;
+}
+
 
 .componentsList {
 
@@ -47,11 +52,14 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
 
+.componentsList li {
+  position: relative;
 }
 
 .componentsList li:hover {
-  color: rgb(14, 187, 200);
+  color: var(--enfasis-color);
   font-weight: 800;
   transition: all 0.15s;
 }
@@ -86,7 +94,7 @@
 
 .content::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: rgb(14, 187, 200);
+  background-color: var(--enfasis-color);
 }
 
 .configurations {
@@ -105,7 +113,7 @@
 .articleSections {
   margin-top: 30px;
   min-width: 150px;
-  padding-left: 50px;
+  margin-left: 50px;
 
   list-style: none;
 
@@ -115,11 +123,15 @@
 }
 
 .articleSections b {
-  text-decoration: underline;
+  color: var(--enfasis-color);
+}
+
+.articleSections li {
+  position: relative;
 }
 
 .articleSections li:hover {
-  color: rgb(14, 187, 200);
+  color: var(--enfasis-color);
   font-weight: 800;
   transition: all 0.15s;
 }
@@ -130,9 +142,11 @@
 
 .sideTitles,
 .responsiveMenuTitle {
-  text-decoration: underline;
-  padding: 30px 0 30px 0;
+  position: relative;
+  /* text-decoration: underline; */
+  margin: 30px 0 30px 0;
   line-height: 70px;
+  color: var(--enfasis-color);
 }
 
 .responsiveMenuTitle {
@@ -144,13 +158,49 @@
 }
 
 .anotations {
-  color: lightblue;
+  color: var(--enfasis-color);
 }
 
-/* .responsiveMenu {
-  display: flex;
-  flex-direction: column;
+.literalLinks {
+  position: relative;
+  color: var(--enfasis-color);
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.literalLinks::after,
+.responsiveMenuTitle::after,
+.articleSections li::after,
+.componentsList li::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--enfasis-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+/* .responsiveMenuTitle::after {
+  
 } */
+
+.literalLinks:hover::after,
+.responsiveMenuTitle:hover::after,
+.articleSections li:hover::after,
+.componentsList li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.responsiveMenuTitle:hover {
+  text-decoration: none;
+  color: var(--enfasis-color);
+}
 
 
 @media (max-width: 1050px) {

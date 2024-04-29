@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 
 import moduleStyles from './style.module.css'
+import { useEffect } from 'react'
 
 export default function FloatMenu ({
   // edit here the component colors
@@ -38,6 +39,7 @@ export default function FloatMenu ({
 }) {
   // Preconfigurated Font Sizes
   const fontSizesConstants = {
+    xs: 1,
     s: 2,
     m: 3,
     l: 4,
@@ -52,9 +54,12 @@ export default function FloatMenu ({
     '--colorBackgroundFloatMenu': colorBackground,
     '--colorHoverFloatMenu': colorHover
   }
-  for (const [property, value] of Object.entries(stylesFloatMenu)) {
-    rootElement.style.setProperty(property, value)
-  }
+
+  useEffect(() => {
+    for (const [property, value] of Object.entries(stylesFloatMenu)) {
+      rootElement.style.setProperty(property, value)
+    }
+  }, [])
 
   // component construction ready for use
   return (

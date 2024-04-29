@@ -1,10 +1,11 @@
 .codeBox {
   background-color: var(--colorBackgroundCodeBox);
+  border: 1px solid white;
   color: var(--colorCodeCodeBox);
   padding: 10px;
   border-radius: 5px;
   overflow: auto;
-  width: 80%;
+  /* width: var(--widthCodeBox); */
   margin: auto;
   font-size: var(--fontSizeCodeBox);
 }
@@ -39,13 +40,13 @@
   background-color: var(--colorButtonCodeBox);
   cursor: pointer;
   transition: background-color 0.25s;
+}
 
-  &:hover {
-    background-color: var(--colorButtonHoverCodeBox);
-  }
+.copyButton:hover {
+  background-color: var(--colorButtonHoverCodeBox);
+}
 
-  &:focus,
-  &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
+.copyButton:focus,
+.copyButton:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }

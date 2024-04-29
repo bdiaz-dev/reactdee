@@ -2,9 +2,7 @@
 
 'use client'
 
-import { useRef } from 'react'
-// import { Link } from 'react-router-dom
-// import Link from 'next/link'
+import { useRef, useEffect } from 'react'
 import moduleStyles from './style.module.css'
 
 /**
@@ -117,9 +115,12 @@ export default function HeadMenu ({
     '--fontSizeMenuResponsiveHeadMenu': `${fontConstants[size] * 1.2}em`
   }
 
-  for (const [property, value] of Object.entries(CSSvars)) {
-    rootElement.style.setProperty(property, value)
-  }
+
+  useEffect(() => {
+    for (const [property, value] of Object.entries(CSSvars)) {
+      rootElement.style.setProperty(property, value)
+    }
+  }, [])
 
   const handleHover = (e) => {
     if ((window.visualViewport.width < 1000) && (e.target.querySelector('ul').style.transform === 'scale(1, 1)')) {

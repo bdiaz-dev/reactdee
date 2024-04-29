@@ -65,7 +65,7 @@ export default function GalleryPage () {
         <br />
 
         <p>
-          <a href="https://github.com/reactdee/headmenu" style={{ color: 'lightblue', textDecoration: 'underline' }}>
+          <a className={styles.literalLinks} href="https://github.com/reactdee/headmenu">
             https://github.com/reactdee/headmenu
           </a>
         </p>
@@ -216,7 +216,7 @@ export default function GalleryPage () {
 
       </div>
       <ul className={styles.articleSections}>
-        <b className={styles.sideTitles}>On this page</b>
+        <b>On this page</b>
         <li>
           <a href="#start">Start</a>
         </li>

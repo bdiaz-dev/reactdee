@@ -26,7 +26,7 @@ export default function FloatMenuPage () {
           // colorFont='white'
           colorBackground='lightblue'
           colorHover='rgb(14, 187, 200)'
-          fontSize='xs'
+          fontSize='s'
         />
         <br />
 
@@ -61,7 +61,7 @@ export default function FloatMenuPage () {
         <br />
 
         <p>
-          <a href="https://github.com/reactdee/floatmenu">https://github.com/reactdee/floatmenu</a>
+          <a className={styles.literalLinks} href="https://github.com/reactdee/floatmenu">https://github.com/reactdee/floatmenu</a>
         </p>
         <br />
 
@@ -144,7 +144,7 @@ export default function FloatMenuPage () {
         </CodeBox>
         <br />
         <p className={styles.anotations}>
-          * You can use as many elements as you need. Just add or remove more objects to the array.
+          👉 You can use as many elements as you need. Just add or remove more objects to the array.
         </p>
         <br />
 
@@ -171,7 +171,7 @@ export default function FloatMenuPage () {
         </p>
         <br />
         <p className={styles.anotations}>
-          {`Remember that you can add as many configurations as you want, and those that are not added will use their default settings.`}
+          {`💭 Remember that you can add as many configurations as you want, and those that are not added will use their default settings.`}
         </p>
         <br />
 
