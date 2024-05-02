@@ -1,8 +1,10 @@
-'use client'
+// 'use client'
 
 import styles from '../docs.module.css'
 import CodeBox from 'reactdee-codebox'
 // import Link from 'next/link'
+
+const props = { width: '95%', colorButtonHover: 'rgb(14, 187, 200)' }
 
 export default function CodeBoxPage () {
   return (
@@ -38,7 +40,9 @@ export default function CodeBoxPage () {
           1- Install from npm:
         </p>
         <br />
-        <CodeBox width={'95%'}>
+        <CodeBox
+          {...props}
+        >
           {
             `
   $ npm i reactdee-codebox
@@ -63,7 +67,9 @@ export default function CodeBoxPage () {
         </p>
         <br />
 
-        <CodeBox width={'95%'}>
+        <CodeBox
+          {...props}
+        >
           {
             `
   import CodeBox from 'reactdee-codebox'
@@ -77,7 +83,7 @@ export default function CodeBoxPage () {
         </p>
         <br />
 
-        <CodeBox width={'95%'}>
+        <CodeBox {...props}>
           {
             `
   export default function App () {
@@ -97,7 +103,7 @@ export default function CodeBoxPage () {
         </p>
         <br />
 
-        <CodeBox width={'95%'}>
+        <CodeBox {...props}>
           {
             `
       <CodeBox>
@@ -190,7 +196,7 @@ export default function CodeBoxPage () {
         </ul>
         <br />
 
-        <CodeBox width={'95%'}>
+        <CodeBox {...props}>
           {
             `
   export default function App () {
@@ -238,7 +244,7 @@ export default function CodeBoxPage () {
         </ul>
         <br />
 
-        <CodeBox width={'95%'}>
+        <CodeBox {...props}>
           {
             `
   export default function App () {
@@ -262,6 +268,11 @@ export default function CodeBoxPage () {
         </CodeBox>
         <br />
 
+        <p className={styles.anotations}>
+          {'🦊 Tip: You can use an object to reuse the same configurations in several components and thus avoid repeating code. Use destructuring to apply them.'}
+        </p>
+        <br />
+
         <hr />
         <br />
 
@@ -270,50 +281,35 @@ export default function CodeBoxPage () {
         </h3>
         <br />
 
-        <CodeBox
-          width={'95%'}
-          colorButtonHover='rgb(14, 187, 200)'
-        >
+        <CodeBox {...props}>
           {
             `
   
   import CodeBox from 'reactdee-codebox'
   
-  const elements = {
-    home: {
-      title: 'Home',
-      url: https://mywebsite.com/home,
-    },
-    company: {
-      title: 'Company',
-      onClick: () => { handleCompany() },
-      subElements: {
-        history: {
-          title: 'Our history',
-          onClick: () => { handleHistory() }
-        },
-        gallery: {
-          title: 'Images gallery',
-          url: "https://mywebsite.com/gallery
-        }
-      }
-    }
+  const props = {
+    colorCode : 'rgba(0, 0, 255, 1)'
+    colorBackground : rgb(0,0,0)
+    colorButton : 'red'
+    colorButtonHover : '#d3d3d3'
+    colorButtonText : 'rgb(10,10,10)'
+    colorButtonIco :  'white'
+    buttonSize : '1'
+    fontSize : '1'
   }
             
   export default function App () {
     return (
       <>
-        <HeadMenu
-          elements = {elements}
-          colorLink = 'rgba(0, 0, 255, 1)'
-          colorHover = 'red'
-          colorBackground = '#d3d3d3'
-          colorOpenTag = 'rgb(10,10,10)'
-          size = 's'
-          menuAlign = 'end'
-          logo = 'https://www.svgrepo.com/show/439290/react.svg'
-          logoAlign = 'start'
-        />
+        <CodeBox
+          {...props}
+        >
+        {
+          \`
+  const codeExample.tryIt(isSoFunny)
+          \`
+        }
+        </CodeBox>
       </>
     )
   }

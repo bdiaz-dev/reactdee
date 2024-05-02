@@ -1,3 +1,5 @@
+// 'use client'
+
 import styles from './docs.module.css'
 import { redirect } from 'next/navigation'
 

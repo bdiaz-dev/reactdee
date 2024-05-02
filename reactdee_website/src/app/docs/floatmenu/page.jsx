@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import styles from '../docs.module.css'
 import CodeBox from 'reactdee-codebox'
