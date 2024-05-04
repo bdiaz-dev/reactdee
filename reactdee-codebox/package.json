@@ -1,6 +1,6 @@
 {
   "name": "reactdee-codebox",
-  "version": "0.1.9",
+  "version": "1.0.0",
   "description": "Simply, easy and ready for use code box component for React",
   "main": "index.jsx",
   "scripts": {

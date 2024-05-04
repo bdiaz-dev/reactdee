@@ -1,13 +1,13 @@
 .menu {
-  background-color: var(--colorBackgroundHeadMenu);
-  font-size: var(--fontSizeMenuHeadMenu);
+  /* background-color: var(--colorBackgroundHeadMenu); */
+  /* font-size: var(--fontSizeMenuHeadMenu); */
   width: 100dvw;
   height: 3em;
   position: fixed;
   top: 0;
   right: 0;
   display: Flex;
-  justify-content: var(--menuAlignHeadMenu);
+  /* justify-content: var(--menuAlignHeadMenu); */
   flex-direction: row;
   align-items: center;
   list-style: none;
@@ -28,8 +28,8 @@
 }
 
 .menuResponsive {
-  background-color: var(--colorBackgroundHeadMenu);
-  font-size: var(--fontSizeMenuResponsiveHeadMenu);
+  /* background-color: var(--colorBackgroundHeadMenu); */
+  /* font-size: var(--fontSizeMenuResponsiveHeadMenu); */
   display: none;
   width: 15em;
   position: fixed;
@@ -58,7 +58,7 @@
 }
 
 .responsiveElement {
-  background-color: var(--colorBackgroundHeadMenu);
+  /* background-color: var(--colorBackgroundHeadMenu); */
   top: 0;
   right: -1em;
   position: relative;
@@ -69,7 +69,7 @@
 }
 
 .element {
-  background-color: var(--colorBackgroundHeadMenu);
+  /* background-color: var(--colorBackgroundHeadMenu); */
   top: 0;
   position: relative;
   padding: 0.5em;
@@ -83,7 +83,7 @@
 }
 
 .subMenu {
-  background-color: var(--colorBackgroundHeadMenu);
+  /* background-color: var(--colorBackgroundHeadMenu); */
   position: absolute;
   left: 0;
   padding: 0.5em;
@@ -104,7 +104,7 @@
 }
 
 .a {
-  color: var(--colorLinkHeadMenu);
+  /* color: var(--colorLinkHeadMenu); */
   font-weight: 700;
   margin-right: 0.5em;
   text-decoration: none;
@@ -113,12 +113,12 @@
   cursor: pointer;
 }
 
-.a:hover {
+/* .a:hover {
   text-shadow: var(--hoverLinkHeadMenu);
-}
+} */
 
 .v {
-  color: var(--colorOpenTagHeadMenu);
+  /* color: var(--colorOpenTagHeadMenu); */
   margin-left: 0.3em;
   writing-mode: vertical-rl;
   transition: all 0.3s;

@@ -1,13 +1,9 @@
 .codeBox {
-  background-color: var(--colorBackgroundCodeBox);
   border: 1px solid white;
-  color: var(--colorCodeCodeBox);
   padding: 10px;
   border-radius: 5px;
   overflow: auto;
-  /* width: var(--widthCodeBox); */
   margin: auto;
-  font-size: var(--fontSizeCodeBox);
 }
 
 .pre {
@@ -29,21 +25,13 @@
 
   float: right;
 
-  color: var(--colorButtonTextCodeBox);
-
   border-radius: 5px;
   border: 1px solid transparent;
   padding: 0.4em 1.5em;
-  font-size: var(--buttonSizeCodeBox);
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--colorButtonCodeBox);
   cursor: pointer;
   transition: background-color 0.25s;
-}
-
-.copyButton:hover {
-  background-color: var(--colorButtonHoverCodeBox);
 }
 
 .copyButton:focus,

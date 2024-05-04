@@ -2,7 +2,26 @@
 /* eslint-disable react/prop-types */
 
 import moduleStyles from './style.module.css'
-import { useEffect } from 'react'
+import { useState } from 'react'
+
+const Element = ({ colorHover, colorBackground, fontSize, url, children }) => {
+  const [isHovered, setIsHovered] = useState(false)
+  return (
+    <div
+      className={moduleStyles.element}
+      onClick={() => { window.open(url) }}
+      onMouseOver={() => { setIsHovered(true) }}
+      onMouseOut={() => { setIsHovered(false) }}
+      style={{
+        backgroundColor: isHovered ? colorHover : colorBackground,
+        transform: isHovered ? 'scale(1.1)' : 'scale(1)',
+        fontSize
+      }}
+    >
+      {children}
+    </div>
+  )
+}
 
 export default function FloatMenu ({
   // edit here the component colors
@@ -40,37 +59,27 @@ export default function FloatMenu ({
   // Preconfigurated Font Sizes
   const fontSizesConstants = {
     xs: 1,
-    s: 2,
-    m: 3,
-    l: 4,
-    xl: 5
+    s: 1.5,
+    m: 2,
+    l: 2.5,
+    xl: 3
   }
-
-  // variables for CSS
-  const rootElement = document.documentElement
-  const stylesFloatMenu = {
-    '--fontSizeFloatMenu': `${fontSizesConstants[fontSize]}dvw`,
-    '--colorFontFloatMenu': colorFont,
-    '--colorBackgroundFloatMenu': colorBackground,
-    '--colorHoverFloatMenu': colorHover
-  }
-
-  useEffect(() => {
-    for (const [property, value] of Object.entries(stylesFloatMenu)) {
-      rootElement.style.setProperty(property, value)
-    }
-  }, [])
 
   // component construction ready for use
   return (
     <nav
       className={`aaaa ${moduleStyles.container}`}
+      style={{
+        color: colorFont
+      }}
     >
       {elements.map(({ img, text, url }) => (
-        <div
-          className={`elementForHover ${moduleStyles.element}`}
+        <Element
           key={text}
-          onClick={() => { window.open(url) }}
+          colorHover={colorHover}
+          colorBackground={colorBackground}
+          fontSize={`${fontSizesConstants[fontSize]}em`}
+          url={url}
         >
           <img
             src={img}
@@ -78,7 +87,7 @@ export default function FloatMenu ({
             className={moduleStyles.image}
           />
           <p>{text}</p>
-        </div>
+        </Element>
       ))}
     </nav>
   )

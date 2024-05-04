@@ -17,7 +17,7 @@ export default function Home () {
           height={110}
           priority
         />
-        <p>ReactDee <span>By BrunoDiaz.es</span></p>
+        <p>ReactDee <span> By BrunoDiaz.es</span></p>
       </div>
 
 
@@ -32,10 +32,10 @@ export default function Home () {
           <Link className={styles.getStartedButton} href={'/docs'}>
             {'Get Started'}
           </Link>
-          <Link className={styles.welcomeButtons} href={'https://github.com/bdiaz-dev/reactdee'} target='blank'>
+          <Link href={'https://github.com/bdiaz-dev/reactdee'} target='blank'>
             GitHub Repo
           </Link>
-          <Link className={styles.welcomeButtons} href={'http://brunodiaz.es'} target='blank'>
+          <Link href={'http://brunodiaz.es'} target='blank'>
             Meet me
           </Link>
         </div>

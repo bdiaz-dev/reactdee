@@ -1,6 +1,6 @@
 {
   "name": "reactdee_website",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,10 +12,10 @@
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "reactdee-codebox": "^0.2.0",
-    "reactdee-floatmenu": "^0.1.2",
-    "reactdee-gallery": "^0.2.0",
-    "reactdee-headmenu": "^0.2.1"
+    "reactdee-codebox": "^1.0.0",
+    "reactdee-floatmenu": "^1.0.0",
+    "reactdee-gallery": "^1.0.0",
+    "reactdee-headmenu": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^8",

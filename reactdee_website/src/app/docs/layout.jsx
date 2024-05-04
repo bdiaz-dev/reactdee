@@ -1,6 +1,7 @@
 'use client'
 
 import styles from './docs.module.css'
+import Header from '@/ui/Header'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -41,15 +42,25 @@ export default function DocsLayout ({ children }) {
   return (
     <div>
 
-      <header className={styles.header}>
+      {/* <header className={styles.header}>
         <Image
           alt='ReactDee Logo'
           src="/reactdee_logo.png"
           width='40'
           height='40'
         />
-        <span>ReactDee</span>
-      </header>
+        <div className={styles.headerTitle}>
+          <span>ReactDee</span>
+          <a
+            href='https://brunodiaz.es'
+            target='blank'
+          // TODO: CAMBIAR IMAGEN CUANDO HAGA HOVER EN BRUNO DIAZ
+          >
+            By BrunoDiaz.es
+          </a>
+        </div>
+      </header> */}
+      <Header />
       <hr />
 
       <nav className={styles.responsiveMenuContainer}>

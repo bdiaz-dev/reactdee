@@ -2,7 +2,7 @@
 
 'use client'
 
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import moduleStyles from './style.module.css'
 
 /**
@@ -11,6 +11,22 @@ import moduleStyles from './style.module.css'
   to change anchors by Link tags. Uncomment the import you need for this.
   Or write that you need if it is another library.
 */
+
+const ElementLink = ({ el, color, colorHover }) => {
+  const [isHovered, setIsHovered] = useState(false)
+  return (
+    <a // change this tag for Link if you use routing (remember the closer)
+      className={moduleStyles.a}
+      onClick={() => handleClick(el)}
+      onMouseOver={() => { setIsHovered(true) }}
+      onMouseOut={() => { setIsHovered(false) }}
+      style={{ color: color, textShadow: isHovered ? colorHover : 'none' }}
+    >
+      {el.title}
+    </a>
+  )
+}
+
 export default function HeadMenu ({
   /**
     Edit here with your prefer colors.
@@ -102,25 +118,25 @@ export default function HeadMenu ({
     xxl: 1.6
   }
 
-  const rootElement = document.documentElement
+  // const rootElement = document.documentElement
   const hoverLink = [`0 0 15px ${colorHover}, 0 0 15px ${colorHover}, 0 0 15px ${colorHover}`, `0 0 0 ${colorHover}`]
 
-  const CSSvars = {
-    '--hoverLinkHeadMenu': hoverLink[0],
-    '--colorBackgroundHeadMenu': colorBackground,
-    '--colorLinkHeadMenu': colorLink,
-    '--menuAlignHeadMenu': menuAlign,
-    '--colorOpenTagHeadMenu': colorOpenTag,
-    '--fontSizeMenuHeadMenu': `${fontConstants[size]}em`,
-    '--fontSizeMenuResponsiveHeadMenu': `${fontConstants[size] * 1.2}em`
-  }
+  // const CSSvars = {
+  //   '--hoverLinkHeadMenu': hoverLink[0],
+  //   '--colorBackgroundHeadMenu': colorBackground,
+  //   '--colorLinkHeadMenu': colorLink,
+  //   '--menuAlignHeadMenu': menuAlign,
+  //   '--colorOpenTagHeadMenu': colorOpenTag,
+  //   '--fontSizeMenuHeadMenu': `${fontConstants[size]}em`,
+  //   '--fontSizeMenuResponsiveHeadMenu': `${fontConstants[size] * 1.2}em`
+  // }
 
 
-  useEffect(() => {
-    for (const [property, value] of Object.entries(CSSvars)) {
-      rootElement.style.setProperty(property, value)
-    }
-  }, [])
+  // useEffect(() => {
+  //   for (const [property, value] of Object.entries(CSSvars)) {
+  //     rootElement.style.setProperty(property, value)
+  //   }
+  // }, [])
 
   const handleHover = (e) => {
     if ((window.visualViewport.width < 1000) && (e.target.querySelector('ul').style.transform === 'scale(1, 1)')) {
@@ -180,6 +196,11 @@ export default function HeadMenu ({
     <>
       <ul
         className={moduleStyles.menu}
+        style={{
+          backgroundColor: colorBackground,
+          fontSize: `${fontConstants[size]}em`,
+          justifyContent: menuAlign
+        }}
       >
         {
           logo &&
@@ -193,28 +214,44 @@ export default function HeadMenu ({
             <li
               className={moduleStyles.element}
               key={element[0]}
+              style={{
+                backgroundColor: colorBackground
+              }}
             >
-              <a // change this tag for Link if you use routing (remember the closer)
+              {/* <a // change this tag for Link if you use routing (remember the closer)
                 className={moduleStyles.a}
                 onClick={() => handleClick(element[1])}
               >
                 {element[1].title}
-              </a>
+              </a> */}
+              <ElementLink
+                el={element[1]}
+                color={colorLink}
+                colorHover={hoverLink[0]}
+              />
               {(element[1].subElements) &&
                 <ul
                   className={moduleStyles.subMenu}
+                  style={{
+                    backgroundColor: colorBackground
+                  }}
                 >
                   {Object.entries(element[1].subElements).map((subElement) => {
                     return (
                       <li
                         key={subElement[1].title} className={moduleStyles.subElement}
                       >
-                        <a // change this tag for Link if you use routing (remember the closer)
+                        {/* <a // change this tag for Link if you use routing (remember the closer)
                           onClick={() => handleClick(element[1])}
                           className={moduleStyles.a}
                         >
                           {subElement[1].title}
-                        </a>
+                        </a> */}
+                        <ElementLink
+                          el={subElement[1]}
+                          color={colorLink}
+                          colorHover={hoverLink[0]}
+                        />
                       </li>
                     )
                   })}
@@ -227,6 +264,10 @@ export default function HeadMenu ({
       <ul
         className={moduleStyles.menuResponsive}
         ref={menuResponsiveRef}
+        style={{
+          backgroundColor: colorBackground,
+          fontSize: `${fontConstants[size] * 1.2}em`
+        }}
       >
         <img
           className={moduleStyles.responsiveMenuButton}
@@ -240,34 +281,53 @@ export default function HeadMenu ({
               <li
                 key={element[0]}
                 className={moduleStyles.responsiveElement}
+                style={{
+                  backgroundColor: colorBackground
+                }}
               >
-                <a // change this tag for Link if you use routing (remember the closer)
+                {/* <a // change this tag for Link if you use routing (remember the closer)
                   onClick={() => handleClick(element[1])}
                   className={moduleStyles.a}
                 >
                   {element[1].title}
-                </a>
+                </a> */}
+                <ElementLink
+                  el={element[1]}
+                  color={colorLink}
+                  colorHover={hoverLink[0]}
+                />
                 {(element[1].subElements) &&
                   <b
                     onClick={(e) => handleHover(e)}
                     className={moduleStyles.v}
+                    style={{
+                      color: colorOpenTag
+                    }}
                   >
                     V
                     {(element[1].subElements) &&
                       <ul
                         className={moduleStyles.subMenu}
+                        style={{
+                          backgroundColor: colorBackground
+                        }}
                       >
                         {Object.entries(element[1].subElements).map((subElement) => {
                           return (
                             <li
                               key={subElement[1].title} className={moduleStyles.subElement}
                             >
-                              <a // change this tag for Link if you use routing (remember the closer)
+                              {/* <a // change this tag for Link if you use routing (remember the closer)
                                 onClick={() => handleClick(element[1])}
                                 className={moduleStyles.a}
                               >
                                 {subElement[1].title}
-                              </a>
+                              </a> */}
+                              <ElementLink
+                                el={subElement[1]}
+                                color={colorLink}
+                                colorHover={hoverLink[0]}
+                              />
                             </li>
                           )
                         })}

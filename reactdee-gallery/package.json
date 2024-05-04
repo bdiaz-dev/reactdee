@@ -1,6 +1,6 @@
 {
   "name": "reactdee-gallery",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "description": "Simply, easy and ready for use gallery component for React",
   "main": "index.jsx",
   "scripts": {

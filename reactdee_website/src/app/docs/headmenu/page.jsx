@@ -20,9 +20,10 @@ export default function HeadMenuPage () {
           {`With this component, you'll be able to have a complete header menu in your application. Fixed on the screen, collapsible, ready for responsiveness, and highly customizable.`}
         </p>
         <br />
+        <br />
 
         <FloatMenu
-          fontSize='xs'
+          fontSize='s'
           colorHover='rgb(14, 187, 200)'
           // colorBackground='white'
           elements={
@@ -37,7 +38,7 @@ export default function HeadMenuPage () {
         />
 
         {/* <Link href={'/previews/headmenu'} target='blank'><span className={styles.anotations}>PREVIEW</span></Link> */}
-        {/* <br /> */}
+        <br />
         <br />
 
         <h3 id='implementation'>

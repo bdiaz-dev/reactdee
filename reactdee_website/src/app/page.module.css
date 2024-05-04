@@ -11,9 +11,11 @@
 
 .center {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: relative;
+  /* flex-direction: column; */
 }
 
 .welcomeButtonsContainer {
@@ -29,6 +31,8 @@
   padding: 10px 20px;
   font-size: 1.5em;
   transition: all .3s;
+  flex-grow: 1;
+  text-align: center;
 }
 
 .getStartedButton {
@@ -59,6 +63,9 @@
 
 .center span {
   font-size: 15px;
+  margin-left: 5px;
+  cursor: pointer;
+  position: relative;
 }
 
 .welcomeText {
@@ -69,5 +76,38 @@
   font-size: 30px;
 
   max-width: 600px;
+}
 
+.center span::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--enfasis-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.center span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media (max-width: 530px) {
+  .center {
+    flex-direction: column;
+  }
+
+  .center p {
+    text-shadow: 2px 2px 2px black;
+  }
+
+  .logo {
+    position: absolute;
+    z-index: -20;
+    transform: scale(1.8);
+  }
 }
