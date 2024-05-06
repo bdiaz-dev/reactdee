@@ -4,6 +4,11 @@ import styles from '../docs.module.css'
 import CodeBox from 'reactdee-codebox'
 import FloatMenu from 'reactdee-floatmenu'
 
+export const metadata = {
+  title: "ReactDee - FloatMenu",
+  description: "Simply, easy, and ready for use React Components for your apps.",
+}
+
 export default function FloatMenuPage () {
   return (
     <div className={styles.article}>

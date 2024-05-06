@@ -4,6 +4,11 @@ import styles from '../docs.module.css'
 import CodeBox from 'reactdee-codebox'
 // import Link from 'next/link'
 
+export const metadata = {
+  title: "ReactDee - CodeBox",
+  description: "Simply, easy, and ready for use React Components for your apps.",
+}
+
 const props = { width: '95%', colorButtonHover: 'rgb(14, 187, 200)' }
 
 export default function CodeBoxPage () {

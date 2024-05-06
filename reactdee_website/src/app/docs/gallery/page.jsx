@@ -2,6 +2,11 @@ import Gallery from 'reactdee-gallery'
 import styles from '../docs.module.css'
 import CodeBox from 'reactdee-codebox'
 
+export const metadata = {
+  title: "ReactDee - Gallery",
+  description: "Simply, easy, and ready for use React Components for your apps.",
+}
+
 export default function GalleryPage () {
   return (
     <div className={styles.article}>

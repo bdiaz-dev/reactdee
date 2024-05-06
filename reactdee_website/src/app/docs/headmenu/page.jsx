@@ -6,6 +6,11 @@ import Link from 'next/link'
 import FloatMenu from 'reactdee-floatmenu'
 // import Gallery from 'reactdee-gallery'
 
+export const metadata = {
+  title: "ReactDee - HeadMenu",
+  description: "Simply, easy, and ready for use React Components for your apps.",
+}
+
 export default function HeadMenuPage () {
   return (
     <div className={styles.article}>
