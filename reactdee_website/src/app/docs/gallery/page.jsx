@@ -58,7 +58,7 @@ export default function GalleryPage () {
         <CodeBox width={'95%'}>
           {
             `
-  npm i reactdee-headmenu
+  npm i reactdee-gallery
               `
           }
         </CodeBox>
