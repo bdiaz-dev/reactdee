@@ -66,7 +66,7 @@ export default function FloatMenuPage () {
         <br />
 
         <p>
-          <a className={styles.literalLinks} href="https://github.com/reactdee/floatmenu">https://github.com/reactdee/floatmenu</a>
+          <a className={styles.literalLinks} href="https://github.com/bdiaz-dev/reactdee/tree/master/reactdee-floatmenu">https://github.com/bdiaz-dev/reactdee/tree/master/reactdee-floatmenu</a>
         </p>
         <br />
 

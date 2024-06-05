@@ -70,8 +70,8 @@ export default function GalleryPage () {
         <br />
 
         <p>
-          <a className={styles.literalLinks} href="https://github.com/reactdee/headmenu">
-            https://github.com/reactdee/headmenu
+          <a className={styles.literalLinks} href="https://github.com/bdiaz-dev/reactdee/tree/master/reactdee-gallery">
+            https://github.com/bdiaz-dev/reactdee/tree/master/reactdee-gallery
           </a>
         </p>
         <br />

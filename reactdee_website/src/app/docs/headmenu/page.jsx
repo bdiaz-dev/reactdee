@@ -76,8 +76,8 @@ export default function HeadMenuPage () {
         </p>
         <br />
 
-        <p>
-          <a href="https://github.com/reactdee/headmenu">https://github.com/reactdee/headmenu</a>
+        <p className={styles.literalLinks}>
+          <a href="https://github.com/bdiaz-dev/reactdee/tree/master/reactdee-headmenu">https://github.com/bdiaz-dev/reactdee/tree/master/reactdee-headmenu</a>
         </p>
         <br />
 

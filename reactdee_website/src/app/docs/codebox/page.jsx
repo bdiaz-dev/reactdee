@@ -63,7 +63,7 @@ export default function CodeBoxPage () {
         <br />
 
         <p>
-          <a className={styles.literalLinks} href="https://github.com/reactdee/codebox">https://github.com/reactdee/codebox</a>
+          <a className={styles.literalLinks} href="https://github.com/bdiaz-dev/reactdee/tree/master/reactdee-codebox">https://github.com/bdiaz-dev/reactdee/tree/master/reactdee-codebox</a>
         </p>
         <br />
 
