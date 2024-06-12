@@ -11,7 +11,8 @@ Indice/Index:
 
 
 - [English](#react-components-reactdee-for-use)
-    - Under construction 🚧
+    - [Presenting ReactDee](#presenting-reactdee)
+    - [Project Readme](#project-readme)
 
 ---
 
@@ -49,16 +50,38 @@ Todo el codigo esta disponible tanto para los componentes creados como para pode
 
 Si encuentras algun fallo, tienes algún problema o quieres proponerme alguna idea para hacer ReactDee mas grande, puedes contactar conmigo por [correo](mailto:contact@brunodiaz.es)
 
+---
 
 ## React components reactdee for use
 
-- Under construction 🚧
+### Presenting ReactDee
 
-If you're considering starting a new project but don't want to spend too much time building your components, or if you already have an application and want to add some elements quickly and easily, you're in the right place.
+🤔 If you're considering starting a new project but don't want to spend too much time building your components, or if you already have an application and want to add some elements quickly and easily, you're in the right place.
 
+🤩 With ReactDee, you'll find very useful components ready to use, where you'll only need to write a few lines indicating the configuration you need, and they'll be up and running.
 
-With ReactDee, you'll find very useful components ready to use, where you'll only need to write a few lines indicating the configuration you need, and they'll be up and running.
+👉 If you visit https://reactdee.brunodiaz.es/docs/home you will have easy-to-follow documentation where you will see how easy it is to implement a ReactDee component in your project.
 
+### Project Readme
 
-And on this page, we offer you straightforward documentation to follow where you'll see how easy it is to implement a ReactDee component in your project.
+This project was born from the idea of ​​being able to offer one more tool that could help other colleagues who are starting out in the world of development with React.
 
+Many types of very useful and complete free component catalogs can be found online. But in some cases the implementation involves a process of installing dependencies and configurations with additional files that, if you have little experience, it can be a hassle trying to use them.
+
+Well, ReactDee comes to solve this.
+
+Write the npm installation request for the component you want in the terminal and it will be ready to import into any part of your application.
+
+Subsequently, the accessories that are passed to this component are used to configure all the available parameters of each one. You don't even need CSS to style it (unless you want to).
+
+The components have been written in JSX to be used in React, and for the configurable styling a combination of inline styles and global variables for CSS have been used. And they have subsequently been uploaded to NPM to be available as individual packages.
+
+It has been tested for use in React applications built with both Vite and Next.Js, and has worked without problems on both sides of the web (client/server).
+
+In fact, the website that hosts the documentation is built with Next.Js to have greater optimization and better management of content routing.
+
+All the code is available both for the created components and to be able to reuse any fragment of the website's code.
+
+If you find any bugs, have any problems or want to propose an idea to make ReactDee bigger, you can contact me by [email](mailto:contact@brunodiaz.es)
+
+---
