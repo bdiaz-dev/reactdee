@@ -6,7 +6,7 @@ Link to web:
 
 Indice/Index:
 - [Español](#bienvenido-a-reactdee---componentes-react-listos-para-usar)
-    - [Presentación de ReactDee](#documentación)
+    - [Presentación de ReactDee](#presentación)
     - [Léeme del proyecto](#léeme-del-proyecto)
 
 
